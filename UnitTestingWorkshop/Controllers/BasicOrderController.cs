@@ -7,7 +7,6 @@ namespace ChipShop.Controllers
 {
     public class BasicOrderController : IOrderController
     {
-
         // Send order to the kitchen and print customer's receipt
         public void PlaceOrder(CustomerOrder order)
         {
@@ -24,9 +23,10 @@ namespace ChipShop.Controllers
                     "This order is empty",
                     nameof(order));
 
-            var receipt = new List<string>();
-
-            receipt.Add($"Order Number {order.Id}");
+            var receipt = new List<string>
+            {
+                $"Order Number {order.Id}"
+            };
 
             foreach (MenuItem item in order.OrderList)
             {

@@ -3,7 +3,7 @@ using ChipShop.Controllers.Interfaces;
 using ChipShop.Enums;
 using ChipShop.Models;
 
-namespace ChipShop.Test.BasicKitchenTests
+namespace ChipShop.Test.Test.BasicKitchenTests
 {
     public class BasicOrderControllerTests
     {
