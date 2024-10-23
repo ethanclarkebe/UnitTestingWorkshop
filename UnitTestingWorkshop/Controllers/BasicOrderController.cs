@@ -2,11 +2,10 @@
 using ChipShop.Controllers.Interfaces;
 using ChipShop.Enums;
 using ChipShop.Models;
-using System.Collections.ObjectModel;
 
 namespace ChipShop.Controllers
 {
-    public class BasicKitchen : IKitchen
+    public class BasicOrderController : IOrderController
     {
 
         // Send order to the kitchen and print customer's receipt
@@ -40,7 +39,7 @@ namespace ChipShop.Controllers
         }
 
         // Get the total cost of the user's order
-        public decimal CalculateOrderCost(Collection<MenuItem> menuItems)
+        public decimal CalculateOrderCost(List<MenuItem> menuItems)
         {
             decimal totalCost = 0;
             foreach (MenuItem item in menuItems)

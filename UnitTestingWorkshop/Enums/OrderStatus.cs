@@ -8,7 +8,7 @@ namespace ChipShop.Enums
 {
     public enum OrderStatus
     {
-        Waiting,
+        Pending,
         InProgress,
         Ready,
     }
