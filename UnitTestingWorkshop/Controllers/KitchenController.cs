@@ -1,4 +1,5 @@
 ﻿using ChipShop.Controllers.Interfaces;
+using ChipShop.Enums;
 using ChipShop.Models;
 
 namespace ChipShop.Controllers
@@ -15,6 +16,11 @@ namespace ChipShop.Controllers
         public void SendOrder(CustomerOrder order)
         {
             throw new NotImplementedException("You need to Mock this!");
+        }
+
+        public List<CustomerOrder> GetInProgressOrders()
+        {
+            return CustomerOrders.Where(co => co.OrderStatus == OrderStatus.InProgress).ToList();
         }
     }
 }

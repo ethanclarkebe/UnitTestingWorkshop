@@ -10,7 +10,7 @@ namespace ChipShop.Controllers
         // Send order to the kitchen and print customer's receipt
         public void PlaceOrder(CustomerOrder order)
         {
-            this.SendToKitchen(order);
+            SendToKitchen(order);
             this.PrintReceipt(order);
         }
 
@@ -50,7 +50,7 @@ namespace ChipShop.Controllers
         }
 
         // Send the order to the kitchen
-        private void SendToKitchen(CustomerOrder order)
+        private static void SendToKitchen(CustomerOrder order)
         {
             order.OrderStatus = OrderStatus.InProgress;
         }
