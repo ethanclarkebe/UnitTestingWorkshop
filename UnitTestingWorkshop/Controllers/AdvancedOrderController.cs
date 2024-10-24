@@ -13,12 +13,17 @@ namespace ChipShop.Controllers
 
         private IKitchenController _kitchenController;
 
-        public AdvancedOrderController(IKitchenController kitchenController)
+        public AdvancedOrderController(
+            IKitchenController kitchenController,
+            decimal smallSizePricing = 0.8m,
+            decimal largeSizePricing = 1.2m
+            )
         {
             _kitchenController = kitchenController;
+            SmallSizePricing = smallSizePricing;
+            LargeSizePricing = largeSizePricing;
+
             Fridge = new Dictionary<MenuItem, int>();
-            SmallSizePricing = 0.8m;
-            LargeSizePricing = 1.2m;
         }
 
         public decimal CalculateOrderCost(List<MenuItem> items)

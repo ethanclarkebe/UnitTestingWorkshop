@@ -14,7 +14,7 @@ namespace ChipShop.Controllers
 
         public void SendOrder(CustomerOrder order)
         {
-            CustomerOrders.Add(order);
+            throw new NotImplementedException("You need to Mock this!");
         }
     }
 }
